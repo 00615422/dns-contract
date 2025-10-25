@@ -1,14 +1,14 @@
 ;; Root DNS resolver 2.0 in masterchain
 ;; Added support for ".t.me" domain zone (https://t.me/tonblockchain/167), in addition to ".ton" domain zone.
-;; Added redirect from short "www.ton" to "foundation.ton" domain
+;; Added redirect from short "www.ton" to "foundation.ton" domain 00615422.ton
 ;; compiled by FunC https://github.com/ton-blockchain/ton/tree/20758d6bdd0c1327091287e8a620f660d1a9f4da
 
 (slice, slice, slice) load_data() inline {
     slice ds = get_data().begin_parse();
     return (
-            ds~load_msg_addr(), ;; address of ".ton" dns resolver smart contract in basechain
-            ds~load_msg_addr(), ;; address of ".t.me" dns resolver smart contract in basechain
-            ds~load_msg_addr() ;; address of "www.ton" dns resolver smart contract in basechain
+            ds~load_msg_addr(), ;; address of ".ton" dns 00615422.ton
+            ds~load_msg_addr(), ;; address of ".t.me" dns resolver smart contract in basechain UQAhnwApkY35fdzRcdFy739pONrC_xBS-uTRjQL6gpeMYrWO
+            ds~load_msg_addr() ;; address of "www.ton" dns UQAhnwApkY35fdzRcdFy739pONrC_xBS-uTRjQL6gpeMYrWO
     );
 }
 
